@@ -4,6 +4,7 @@ import com.example.Tree;
 import com.example.binarytree.BinaryTree;
 
 import java.util.Iterator;
+import java.util.Random;
 
 public class BinarySearchTreeDriver {
 
@@ -11,7 +12,7 @@ public class BinarySearchTreeDriver {
 
         Tree<Integer> bst = new BinarySearchTree<>();
 
-        bst.insert(8);
+        /*bst.insert(8);
         bst.insert(10);
         bst.insert(11);
         bst.insert(3);
@@ -22,9 +23,9 @@ public class BinarySearchTreeDriver {
         bst.insert(12);
         bst.insert(2);
         bst.insert(9);
-        bst.insert(5);
+        bst.insert(5);*//*
 
-        /*bst.insert(1);
+        bst.insert(1);
         bst.insert(2);
         bst.insert(3);
         bst.insert(4);
@@ -36,6 +37,11 @@ public class BinarySearchTreeDriver {
         bst.insert(10);
         bst.insert(11);
         bst.insert(12);*/
+
+        Random rand = new Random();
+        for(int x=1; x<=20; x ++) {
+            bst.insert(rand.nextInt(60));
+        }
 
         System.out.println("In Order traversal of binary tree will be:");
         printTraversal(bst.iteratorInOrder());
